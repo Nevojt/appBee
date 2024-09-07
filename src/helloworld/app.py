@@ -19,15 +19,14 @@ class MyApp(toga.App):
         self.label_password = toga.Label(text="Password", style=Pack(font_family="serif",
                                                             font_style="italic"))
         
-        self.name_input = toga.TextInput(style=Pack(flex=1, padding=(0, 0, 20, 0), font_family="serif",
+        self.name_input = toga.TextInput(style=Pack(flex=1, padding=(0, 0, 10, 0), font_family="serif",
                                                             font_style="italic"))
         
         self.password_input = toga.PasswordInput(style=Pack(flex=1))
         
         
-        
-        button = Button(text="button", on_press=self.say_hello, style=Pack(flex=1))
-        button_2 = Button("button2", style=Pack(flex=2))
+        button = Button(text="Safe password", on_press=self.say_hello, style=Pack(flex=1, text_align="center"))
+        button_2 = Button(icon=toga.Icon(path="resources/dev.png"), style=Pack(flex=1, text_align="center"))
         
         top =       Box(style=Pack(direction=COLUMN, flex=1),
                         children=[self.label, self.label_name, self.name_input, self.label_password, self.password_input])
